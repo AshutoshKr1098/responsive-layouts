@@ -1,3 +1,8 @@
+:root {
+  --font-dark: #333;
+  --icon-button: rgb(34, 33, 33);
+  --card-color: #ddd;
+}
 * {
   margin: 0px;
   padding: 0px;
@@ -9,13 +14,128 @@ body {
   font-family: "Helvetica Neue";
   font-weight: 300;
   color: rgb(31, 30, 30);
-  background-color: rgb(95, 90, 90);
-  height: 100vh;
+  background-color: rgb(199, 187, 187);
 }
 .container {
   max-width: 1200px;
   width: 98%;
   margin: 20px auto;
-  background-color: #fff;
+  /* background-color: #fff; */
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(12, 1fr);
   height: 100%;
+}
+
+/* =================================================================
+                        General Styles
+================================================================*/
+button {
+  padding: 0.7rem 2rem;
+  border: none;
+  background-color: var(--icon-button);
+  color: var(--card-color);
+}
+header {
+  grid-column: 1/13;
+}
+header ul {
+  list-style: none;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1em;
+  justify-content: space-between;
+}
+header li {
+  display: inline-block;
+  padding: 0.4rem 5rem;
+  background-color: var(--card-color);
+  color: var(--font-dark);
+}
+.banner {
+  grid-column: 1/9;
+  background-color: black;
+  grid-row: 2/4;
+  position: relative;
+  height: 500px;
+  width: 100%;
+}
+.banner img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+}
+.banner__content {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+}
+.banner__content h2 {
+  color: aliceblue;
+  font-weight: 300;
+  font-size: 3em;
+  letter-spacing: 0.6rem;
+}
+.banner__content p {
+  color: var(--card-color);
+  font-size: 0.8rem;
+  margin: 1.5rem 0;
+}
+.membership {
+  grid-column: 9/13;
+  grid-row: 2/4;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+}
+.membership__card {
+  background-color: var(--card-color);
+}
+.features {
+  grid-column: 1/13;
+  grid-row: 4/6;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+.features__cards {
+  padding: 2rem;
+  background-color: var(--card-color);
+  text-align: center;
+  color: var(--font-dark);
+}
+.info {
+  grid-column: 1/13;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.info__image {
+  background-color: #333;
+  height: 400px;
+  width: 500px;
+}
+.info__image img {
+  height: 100%;
+  width: 100%;
+}
+.info__content {
+  padding: 30px;
+}
+.images {
+  grid-column: 1/13;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(7, 1fr);
+}
+.images img {
+  height: 200px;
+  width: 150px;
+  background-color: #ccc;
+}
+footer {
+  background-color: var(--font-dark);
+  grid-column: 1/13;
+  grid-row: 8/14;
 }
